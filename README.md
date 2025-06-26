@@ -56,6 +56,10 @@ For example:
 ## Scripts
 
 ```bash
+yarn lint
+yarn lint:fix
+yarn format
+yarn format:check
 yarn start    # Development server
 yarn build    # Production build
 yarn test     # Run tests
