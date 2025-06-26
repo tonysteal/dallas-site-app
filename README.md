@@ -64,6 +64,7 @@ yarn format:check
 yarn start    # Development server
 yarn build    # Production build
 yarn test     # Run tests
+yarn test:coverage
 ```
 
 ## Tech Stack
