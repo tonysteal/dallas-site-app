@@ -16,6 +16,7 @@ A modern single-page React application featuring smooth scrolling navigation and
 - 🚀 Deployed on Vercel
 - 📝 Dynamic content management
 - 🎨 Clean, professional styling
+- 🔧 ESLint + Prettier for code quality
 
 ## Development
 
