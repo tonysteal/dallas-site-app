@@ -61,6 +61,7 @@ yarn lint
 yarn lint:fix
 yarn format
 yarn format:check
+yarn spell-check  # Check spelling
 yarn start    # Development server
 yarn build    # Production build
 yarn test     # Run tests
