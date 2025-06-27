@@ -121,14 +121,14 @@
   ],
   "Team": [
     {
-      "img": "img/team/01.jpg",
+      "img": "img/team/tony.jpeg",
       "name": "Tony York",
-      "job": "NA"
+      "info": "Originally from Louisiana, Software Engineer at Southwest Airlines"
     },
     {
-      "img": "img/team/02.jpg",
+      "img": "img/team/kelsey.jpeg",
       "name": "Kelsey Balser",
-      "job": "NA"
+      "info": "From Aledo, Project Manger at Bank of America"
     }
   ],
   "Contact": {
