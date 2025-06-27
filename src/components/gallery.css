@@ -1,0 +1,12 @@
+.portfolio-items .col-sm-6,
+.portfolio-items .col-md-4,
+.portfolio-items .col-lg-4 {
+  margin-bottom: 20px;
+}
+
+.portfolio-items img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}

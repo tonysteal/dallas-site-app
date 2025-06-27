@@ -1,7 +1,7 @@
 {
   "Header": {
     "title": "Welcome to Dallas",
-    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum."
+    "paragraph": "Between heatwaves and high-rises, here's a local guide just for you—my favorite spots, hidden gems, and things to know before you visit."
   },
   "About": {
     "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -20,61 +20,56 @@
   },
   "Gallery": [
     {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/01-large.jpg",
-      "smallImage": "img/portfolio/01-small.jpg"
+      "title": "Katy Trail",
+      "largeImage": "img/portfolio/Katy-Trail-Dallas.jpg",
+      "smallImage": "img/portfolio/Katy-Trail-Dallas.jpg"
     },
     {
-      "title": "Project Title",
+      "title": "Adolphus Hotel",
       "largeImage": "img/portfolio/02-large.jpg",
-      "smallImage": "img/portfolio/02-small.jpg"
+      "smallImage": "img/portfolio/adolphus-hotel.jpeg"
     },
     {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/03-large.jpg",
-      "smallImage": "img/portfolio/03-small.jpg"
+      "title": "White Rock Lake",
+      "largeImage": "img/portfolio/white-rock-lake.jpg",
+      "smallImage": "img/portfolio/white-rock-lake.jpg"
     },
     {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/04-large.jpg",
-      "smallImage": "img/portfolio/04-small.jpg"
+      "title": "Bishop Arts",
+      "largeImage": "img/portfolio/bishop-arts.jpg",
+      "smallImage": "img/portfolio/bishop-arts.jpg"
     },
     {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/05-large.jpg",
-      "smallImage": "img/portfolio/05-small.jpg"
+      "title": "Knox Street",
+      "largeImage": "img/portfolio/knox-street.jpg",
+      "smallImage": "img/portfolio/knox-street.jpg"
     },
     {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/06-large.jpg",
-      "smallImage": "img/portfolio/06-small.jpg"
+      "title": "Eye",
+      "largeImage": "img/portfolio/eye.jpg",
+      "smallImage": "img/portfolio/eye.jpg"
     },
     {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/07-large.jpg",
-      "smallImage": "img/portfolio/07-small.jpg"
+      "title": "North Park Mall",
+      "largeImage": "img/portfolio/north-park-mall.jpg",
+      "smallImage": "img/portfolio/north-park-mall.jpg"
     },
     {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/08-large.jpg",
-      "smallImage": "img/portfolio/08-small.jpg"
-    },
-    {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/09-large.jpg",
-      "smallImage": "img/portfolio/09-small.jpg"
+      "title": "Arboretum",
+      "largeImage": "img/portfolio/arboretum-fall.jpg",
+      "smallImage": "img/portfolio/arboretum-fall.jpg"
     }
   ],
   "Services": [
     {
-      "icon": "fa fa-wordpress",
-      "name": "Lorem ipsum dolor",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "icon": "fa fa-wifi",
+      "name": "WiFi",
+      "text": "USS-Texas or <Kelsey's Wifi>"
     },
     {
-      "icon": "fa fa-cart-arrow-down",
-      "name": "Consectetur adipiscing",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "icon": "fa fa-coffee",
+      "name": "Coffee",
+      "text": "We have a Nespresso machine that can make hot or cold lattes, cappuccinos, or straight espresso - perfect for your caffeine fix!"
     },
     {
       "icon": "fa fa-cloud-download",
@@ -141,24 +136,29 @@
   },
   "Features": [
     {
-      "icon": "fa fa-comments-o",
-      "title": "Food/Drink",
-      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+      "icon": "fa fa-cutlery",
+      "title": "Food & Drink",
+      "text": "Sharing my favorite recipes, foodie adventures, and cozy coffee shop finds from around the world."
     },
     {
-      "icon": "fa fa-bullhorn",
-      "title": "Fitness",
-      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+      "icon": "fa fa-coffee",
+      "title": "Coffee Thoughts",
+      "text": "Little musings and big ideas — all brewed over a hot cup of coffee. My journal of slow mornings and deep thoughts."
     },
     {
-      "icon": "fa fa-group",
-      "title": "Events",
-      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+      "icon": "fa fa-heartbeat",
+      "title": "Fitness Journey",
+      "text": "From yoga flows to home workouts, here’s how I try to stay active (and sane) in a busy world."
     },
     {
-      "icon": "fa fa-magic",
-      "title": "Travel",
-      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+      "icon": "fa fa-calendar",
+      "title": "Events & Life",
+      "text": "Behind-the-scenes of life’s big (and small) moments — weddings, parties, and those random Tuesdays that matter."
+    },
+    {
+      "icon": "fa fa-plane",
+      "title": "Travel Stories",
+      "text": "Wanderlust-fueled stories, tips, and photo dumps from the places that stole my heart — and maybe yours too."
     }
   ]
 }
