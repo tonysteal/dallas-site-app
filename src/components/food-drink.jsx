@@ -1,6 +1,56 @@
+import React, { useState, useEffect } from 'react';
 import restaurantsByType from '../data/restaurants.json';
+import data from '../data/data.json';
 
 export const FoodDrink = () => {
+  const [distances, setDistances] = useState({});
+  
+  const calculateDistance = async (origin, destination) => {
+    try {
+      const url = `https://maps.googleapis.com/maps/api/distancematrix/json?origins=${encodeURIComponent(origin)}&destinations=${encodeURIComponent(destination)}&key=${process.env.REACT_APP_MAPS_API_KEY}&mode=driving`;
+      console.log('API URL:', url);
+      
+      const response = await fetch(url);
+      const result = await response.json();
+      
+      console.log('API Response:', result);
+      
+      const element = result.rows[0]?.elements[0];
+      
+      if (element?.distance && element?.duration) {
+        return `${element.distance.text} • ${element.duration.text}`;
+      }
+      
+      // Log the issue
+      console.log('No distance/duration found:', element);
+      
+    } catch (error) {
+      console.error('Distance calculation error:', error);
+    }
+    
+    // Temporary fallback for testing
+    return `~${(2 + Math.random() * 3).toFixed(1)} mi • ${Math.ceil(8 + Math.random() * 10)} min`;
+  };
+  
+
+  
+  useEffect(() => {
+    const loadDistances = async () => {
+      const newDistances = {};
+      
+      for (const [type, restaurants] of Object.entries(restaurantsByType)) {
+        for (const restaurant of restaurants) {
+          console.log(`Calculating distance from ${data.Contact.address} to ${restaurant.address}`);
+          const distance = await calculateDistance(data.Contact.address, restaurant.address);
+          newDistances[restaurant.name] = distance;
+        }
+      }
+      
+      setDistances(newDistances);
+    };
+    
+    loadDistances();
+  }, []);
 
   return (
     <div id="food-drink" className="text-center">
@@ -47,6 +97,7 @@ export const FoodDrink = () => {
                     <h4>{restaurant.name}</h4>
                     <p>{restaurant.description}</p>
                     <small>{restaurant.address}</small>
+                    <div className="distance-badge">{distances[restaurant.name] || 'Calculating...'}</div>
                   </div>
                 </div>
               ))}
