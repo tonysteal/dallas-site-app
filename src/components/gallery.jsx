@@ -1,5 +1,5 @@
-import { Image } from "./image";
-import React from "react";
+import { Image } from './image';
+import React from 'react';
 
 export const Gallery = (props) => {
   return (
@@ -27,7 +27,7 @@ export const Gallery = (props) => {
                     />
                   </div>
                 ))
-              : "Loading..."}
+              : 'Loading...'}
           </div>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export const Services = (props) => {
   return (
@@ -15,7 +15,7 @@ export const Services = (props) => {
           {props.data
             ? props.data.map((d, i) => (
                 <div key={`${d.name}-${i}`} className="col-md-4">
-                  {" "}
+                  {' '}
                   <i className={d.icon}></i>
                   <div className="service-desc">
                     <h3>{d.name}</h3>
@@ -23,7 +23,7 @@ export const Services = (props) => {
                   </div>
                 </div>
               ))
-            : "loading"}
+            : 'loading'}
         </div>
       </div>
     </div>
