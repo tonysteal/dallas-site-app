@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navigation } from './components/navigation';
 import { Header } from './components/header';
 import { Features } from './components/features';
@@ -8,6 +9,7 @@ import { Gallery } from './components/gallery';
 import { Testimonials } from './components/testimonials';
 import { Team } from './components/Team';
 import { Contact } from './components/contact';
+import { FoodDrink } from './components/food-drink';
 import JsonData from './data/data.json';
 import SmoothScroll from 'smooth-scroll';
 import './App.css';
@@ -23,7 +25,7 @@ const App = () => {
     setLandingPageData(JsonData);
   }, []);
 
-  return (
+  const HomePage = () => (
     <div>
       <Navigation />
       <Header data={landingPageData.Header} />
@@ -35,6 +37,15 @@ const App = () => {
       <Team data={landingPageData.Team} />
       <Contact data={landingPageData.Contact} />
     </div>
+  );
+
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/food-drink" element={<FoodDrink />} />
+      </Routes>
+    </Router>
   );
 };
 

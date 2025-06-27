@@ -1,0 +1,76 @@
+{
+  "American": [
+    {
+      "name": "The Woolworth",
+      "description": "Rooftop dining with skyline views in downtown",
+      "address": "1520 Elm St, Dallas, TX",
+      "bgColor": "#CD853F"
+    },
+    {
+      "name": "Maple & Motor",
+      "description": "Classic burgers and comfort food",
+      "address": "4810 Maple Ave, Dallas, TX",
+      "bgColor": "#A0522D"
+    }
+  ],
+  "Italian": [
+    {
+      "name": "Nonna",
+      "description": "Authentic Italian in Lemmon Avenue",
+      "address": "4115 Lomo Alto Dr, Dallas, TX",
+      "bgColor": "#228B22"
+    },
+    {
+      "name": "Cacio e Pepe",
+      "description": "Roman-style pasta in Deep Ellum",
+      "address": "1906 Greenville Ave, Dallas, TX",
+      "bgColor": "#DC143C"
+    }
+  ],
+  "Mexican": [
+    {
+      "name": "Revolver Taco Lounge",
+      "description": "Creative tacos and mezcal in Deep Ellum",
+      "address": "2701 Main St, Dallas, TX",
+      "bgColor": "#FF6347"
+    },
+    {
+      "name": "Suerte",
+      "description": "Modern Mexican with house-made tortillas",
+      "address": "1800 E 6th St, Dallas, TX",
+      "bgColor": "#DAA520"
+    }
+  ],
+  "BBQ": [
+    {
+      "name": "Pecan Lodge",
+      "description": "Award-winning barbecue in Deep Ellum",
+      "address": "2702 Main St, Dallas, TX",
+      "bgColor": "#8B4513"
+    }
+  ],
+  "Steakhouse": [
+    {
+      "name": "Knife",
+      "description": "Upscale dining by John Tesar",
+      "address": "5300 E Mockingbird Ln, Dallas, TX",
+      "bgColor": "#2F4F4F"
+    }
+  ],
+  "German": [
+    {
+      "name": "Heimat Bar + Kitchen",
+      "description": "Modern German cuisine in Bishop Arts",
+      "address": "312 W 7th St, Dallas, TX",
+      "bgColor": "#B8860B"
+    }
+  ],
+  "Mediterranean": [
+    {
+      "name": "Meridian",
+      "description": "Turkish-Mediterranean flavors in Preston Center",
+      "address": "4152 Cole Ave, Dallas, TX",
+      "bgColor": "#4682B4"
+    }
+  ]
+}
