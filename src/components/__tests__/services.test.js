@@ -3,7 +3,11 @@ import { Services } from '../services';
 
 const mockData = [
   {
+<<<<<<< HEAD
+    icon: 'fa fa-wifi',
+=======
     icon: 'fa fa-wordpress',
+>>>>>>> origin/main
     name: 'Web Development',
     text: 'Service description here'
   },
@@ -17,7 +21,6 @@ const mockData = [
 describe('Services', () => {
   test('renders services list', () => {
     render(<Services data={mockData} />);
-    
     expect(screen.getByText('Web Development')).toBeInTheDocument();
     expect(screen.getByText('E-commerce')).toBeInTheDocument();
     expect(screen.getByText('Service description here')).toBeInTheDocument();
@@ -25,6 +28,16 @@ describe('Services', () => {
 
   test('renders section heading', () => {
     render(<Services data={mockData} />);
-    expect(screen.getByText('Our Services')).toBeInTheDocument();
+    expect(screen.getByText('Our Home Services')).toBeInTheDocument();
+  });
+
+  test('renders icons with correct CSS classes', () => {
+    render(<Services data={mockData} />);
+
+    const wifiIcon = document.querySelector('.fa.fa-wifi');
+    const cartIcon = document.querySelector('.fa.fa-cart-arrow-down');
+
+    expect(wifiIcon).toBeInTheDocument();
+    expect(cartIcon).toBeInTheDocument();
   });
 });

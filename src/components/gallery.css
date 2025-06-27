@@ -1,7 +1,7 @@
 .portfolio-items .col-sm-6,
 .portfolio-items .col-md-4,
 .portfolio-items .col-lg-4 {
-  margin-bottom: 20px;
+  padding: 0;
 }
 
 .portfolio-items img {
