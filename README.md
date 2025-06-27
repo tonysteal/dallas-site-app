@@ -1,34 +1,80 @@
-# React JS Landing Page Template
+# Dallas Site App
 
-**
+## [🌐 Live Site](https://dallas-site-app.vercel.app)
 
-# 🛎️🛎️ Good news! New & improved [V2](https://github.com/issaafalkattan/react-landing-page-template-2021) is out  
+## Modern React Landing Page
 
-**
+## About
 
+A modern single-page React application featuring smooth scrolling navigation and responsive design.
 
-### <a href="https://react-landing-page-template-93ne.vercel.app/">LIVE DEMO</a> 
+**Features:**
 
-## Description
-This is a ReactJS based landing page template, fit for a startup company/service with a one page view. The design is inspired by a template from <a href="https://www.free-css.com/assets/files/free-css-templates/preview/page234/interact/">Free-CSS.com </a>
-All 'visual' data can be easily modified by changing the data.json file.
+- ⚛️ React 18 with modern hooks
+- 📱 Fully responsive design
+- 📧 Contact form integration
+- 🚀 Deployed on Vercel
+- 📝 Dynamic content management
+- 🎨 Clean, professional styling
+- 🔧 ESLint + Prettier for code quality
 
-## Make it Yours!
-### 1. Preps
-You will need to have <a href="https://nodejs.org/">Node JS</a> installed on your pc. 
+## Development
 
-### 2. Clone Files
-After cloning the files, you will have to run ```yarn``` followed by ```yarn start``` in the CLI
-### 3. Add your own data 
-Change the data in the ```data.json``` file as well as add any images to ```public/img/```
-You can also change styles by modifying the ```public/css``` files.
-If you need the contact form to work, you also need to create an EmailJS account, and modify the ```src/components/contact.jsx``` file to replace your own service ID, template ID and Public Key
+### Prerequisites
 
-## Like this project?
-<a href="https://www.buymeacoffee.com/issaaf">Buy my a coffee ☕️</a>
+- [Node.js](https://nodejs.org/) (v14 or higher)
+- [Yarn](https://yarnpkg.com/) or npm
 
-## Credits
-##### Free CSS 
-<a href="https://www.free-css.com/assets/files/free-css-templates/preview/page234/interact/">Free-CSS.com </a>
+### Setup
 
-##### Issaaf kattan
+```bash
+# Install dependencies
+yarn install
+
+# Start development server
+yarn start
+```
+
+### Content Management
+
+- **Content**: Edit `src/data/data.json` to update site content
+- **Images**: Add images to `public/img/`
+- **Styling**: Modify CSS files in `public/css/`
+- **Contact Form**: Configure EmailJS in `src/components/contact.jsx`
+
+## Deployment
+
+**Production**: Automatically deployed to Vercel on every push to main branch.
+
+**Preview Deployments**: Feature branches are automatically deployed to preview URLs following the format:
+`dallas-site-app-[branch]-tony-yorks-projects.vercel.app`
+
+For example:
+
+- `dallas-site-app-dev-tony-yorks-projects.vercel.app`
+- `dallas-site-app-feature-contact-tony-yorks-projects.vercel.app`
+
+## Scripts
+
+```bash
+yarn lint
+yarn lint:fix
+yarn format
+yarn format:check
+yarn start    # Development server
+yarn build    # Production build
+yarn test     # Run tests
+yarn test:coverage
+```
+
+## Tech Stack
+
+- React 18
+- React DOM 18
+- EmailJS Browser
+- Bootstrap 3
+- Smooth Scroll
+
+## Contributing
+
+Pull requests are welcome! Please use the provided PR template.

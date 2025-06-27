@@ -1,5 +1,6 @@
-import { Image } from "./image";
-import React from "react";
+import { Image } from './image';
+import React from 'react';
+import './gallery.css';
 
 export const Gallery = (props) => {
   return (
@@ -8,8 +9,7 @@ export const Gallery = (props) => {
         <div className="section-title">
           <h2>Gallery</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed
-            dapibus leonec.
+            Here is a collection of a few of our favorite spots in Dallas
           </p>
         </div>
         <div className="row">
@@ -27,7 +27,7 @@ export const Gallery = (props) => {
                     />
                   </div>
                 ))
-              : "Loading..."}
+              : 'Loading...'}
           </div>
         </div>
       </div>
