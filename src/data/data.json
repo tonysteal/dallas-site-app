@@ -142,27 +142,32 @@
     {
       "icon": "fa fa-cutlery",
       "title": "Food & Drink",
-      "text": "Sharing my favorite recipes, foodie adventures, and cozy coffee shop finds from around the world."
+      "text": "Sharing my favorite recipes, foodie adventures, and cozy coffee shop finds from around the world.",
+      "link": "/food-drink"
     },
     {
       "icon": "fa fa-coffee",
       "title": "Coffee",
-      "text": "Little musings and big ideas — all brewed over a hot cup of coffee. My journal of slow mornings and deep thoughts."
+      "text": "Little musings and big ideas — all brewed over a hot cup of coffee. My journal of slow mornings and deep thoughts.",
+      "link": "/coffee"
     },
     {
       "icon": "fa fa-heartbeat",
       "title": "Fitness",
-      "text": "From yoga flows to home workouts, here's how I try to stay active (and sane) in a busy world."
+      "text": "From yoga flows to home workouts, here's how I try to stay active (and sane) in a busy world.",
+      "link": "/fitness"
     },
     {
       "icon": "fa fa-calendar",
       "title": "Events & Life",
-      "text": "Behind-the-scenes of life's big (and small) moments — weddings, parties, and those random Tuesdays that matter."
+      "text": "Behind-the-scenes of life's big (and small) moments — weddings, parties, and those random Tuesdays that matter.",
+      "link": "/events"
     },
     {
       "icon": "fa fa-plane",
       "title": "Travel Stories",
-      "text": "Wanderlust-fueled stories, tips, and photo dumps from the places that stole my heart — and maybe yours too."
+      "text": "Wanderlust-fueled stories, tips, and photo dumps from the places that stole my heart — and maybe yours too.",
+      "link": "/travel"
     }
   ]
 }
