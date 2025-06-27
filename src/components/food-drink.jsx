@@ -1,4 +1,3 @@
-import React from 'react';
 import restaurantsByType from '../data/restaurants.json';
 
 export const FoodDrink = () => {
@@ -10,7 +9,7 @@ export const FoodDrink = () => {
           <h2>Food & Drink in Dallas</h2>
           <p>My favorite spots for great food and drinks around the city</p>
         </div>
-        <nav className="cuisine-navigation">
+        <nav className="cuisine-navigation" style={{position: 'sticky', top: '80px', zIndex: 1000, backgroundColor: '#f6f6f6', paddingTop: '20px', paddingBottom: '20px'}}>
           <ul className="nav nav-pills nav-justified">
             {Object.keys(restaurantsByType).map((type) => (
               <li key={type}>
@@ -28,7 +27,7 @@ export const FoodDrink = () => {
               {restaurants.map((restaurant, i) => (
                 <div key={i} className="col-md-6 col-lg-3">
                   <div className="restaurant-item">
-                    <div 
+                    <div
                       className="restaurant-image"
                       style={{
                         backgroundColor: restaurant.bgColor,
