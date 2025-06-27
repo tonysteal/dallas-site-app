@@ -77,24 +77,28 @@
       "text": "We have a Nespresso machine that can make hot or cold lattes, cappuccinos, or straight espresso - perfect for your caffeine fix!"
     },
     {
-      "icon": "fa fa-cloud-download",
-      "name": "Lorem ipsum dolor",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "icon": "fa fa-bolt",
+      "name": "Energy Drinks",
+      "text": "We have a few different flavours of Celsius available. "
     },
     {
-      "icon": "fa fa-language",
-      "name": "Consectetur adipiscing",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "icon": "fa fa-car",
+      "name": "Parking",
+      "text": "At the Arcadian guest will need to register there car to park in the garage. Guest Code: JHZG9WYH",
+      "link": {
+        "url": "https://www.register2park.com",
+        "text": "Parking Portal"
+      }
     },
     {
-      "icon": "fa fa-plane",
-      "name": "Lorem ipsum dolor",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "icon": "fa fa-film",
+      "name": "Streaming",
+      "text": "Available streaming platforms include Max, Hulu, Amazon Prime, Peacock, and Disney+"
     },
     {
-      "icon": "fa fa-pie-chart",
-      "name": "Consectetur adipiscing",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "icon": "fa fa-film",
+      "name": "Placeholder",
+      "text": "Placeholder"
     }
   ],
   "Testimonials": [
@@ -127,7 +131,7 @@
     },
     {
       "img": "img/team/kelsey.jpeg",
-      "name": "Kelsey Balser",
+      "name": "Kelsey Basler",
       "info": "From Aledo, Project Manager at Bank of America"
     }
   ],
