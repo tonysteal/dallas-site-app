@@ -310,6 +310,27 @@ header .intro-text {
   letter-spacing: 2px;
   color: white;
 }
+/* Food & Drink Section Title */
+#food-drink .section-title {
+  background: #f6f6f6;
+  color: #333;
+  padding: 40px 20px;
+  border-radius: 12px;
+  margin: 30px 0 30px 0;
+}
+
+#food-drink .section-title h2,
+#food-drink .section-title p {
+  color: #333;
+}
+
+.section-separator {
+  height: 4px;
+  width: 60px;
+  background: linear-gradient(to right, #5ca9fb 0%, #6372ff 100%);
+  margin: 0 auto 40px;
+}
+
 /* Cuisine Navigation */
 .cuisine-navigation {
   margin-bottom: 50px;

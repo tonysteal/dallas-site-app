@@ -59,6 +59,7 @@ export const FoodDrink = () => {
           <h2>Food & Drink in Dallas</h2>
           <p>My favorite spots for great food and drinks around the city</p>
         </div>
+        <div className="section-separator"></div>
         <nav className="cuisine-navigation" style={{position: 'sticky', top: '80px', zIndex: 1000, backgroundColor: '#f6f6f6', paddingTop: '20px', paddingBottom: '20px'}}>
           <ul className="nav nav-pills nav-justified">
             {Object.keys(restaurantsByType).map((type) => (
