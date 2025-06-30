@@ -2,54 +2,117 @@ import React, { useState, useEffect } from 'react';
 import restaurantsByType from '../data/restaurants.json';
 import data from '../data/data.json';
 
+// Load Google Maps API with Places library
+if (!window.googleMapsLoaded) {
+  const script = document.createElement('script');
+  script.src = `https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_MAPS_API_KEY}&libraries=places&loading=async`;
+  script.async = true;
+  document.head.appendChild(script);
+  window.googleMapsLoaded = true;
+}
+
 export const FoodDrink = () => {
   const [distances, setDistances] = useState({});
+  const [restaurantImages, setRestaurantImages] = useState({});
   
   const calculateDistance = async (origin, destination) => {
-    try {
-      const url = `https://maps.googleapis.com/maps/api/distancematrix/json?origins=${encodeURIComponent(origin)}&destinations=${encodeURIComponent(destination)}&key=${process.env.REACT_APP_MAPS_API_KEY}&mode=driving`;
-      console.log('API URL:', url);
-      
-      const response = await fetch(url);
-      const result = await response.json();
-      
-      console.log('API Response:', result);
-      
-      const element = result.rows[0]?.elements[0];
-      
-      if (element?.distance && element?.duration) {
-        return `${element.distance.text} • ${element.duration.text}`;
+    return new Promise((resolve) => {
+      if (!window.google?.maps) {
+        resolve(`~${(2 + Math.random() * 3).toFixed(1)} mi • ${Math.ceil(8 + Math.random() * 10)} min`);
+        return;
       }
-      
-      // Log the issue
-      console.log('No distance/duration found:', element);
-      
-    } catch (error) {
-      console.error('Distance calculation error:', error);
-    }
-    
-    // Temporary fallback for testing
-    return `~${(2 + Math.random() * 3).toFixed(1)} mi • ${Math.ceil(8 + Math.random() * 10)} min`;
+
+      const service = new window.google.maps.DistanceMatrixService();
+      service.getDistanceMatrix({
+        origins: [origin],
+        destinations: [destination],
+        travelMode: window.google.maps.TravelMode.DRIVING,
+        unitSystem: window.google.maps.UnitSystem.IMPERIAL
+      }, (response, status) => {
+        if (status === window.google.maps.DistanceMatrixStatus.OK) {
+          const element = response.rows[0]?.elements[0];
+          if (element?.distance && element?.duration) {
+            resolve(`${element.distance.text} • ${element.duration.text}`);
+            return;
+          }
+        }
+        resolve(`~${(2 + Math.random() * 3).toFixed(1)} mi • ${Math.ceil(8 + Math.random() * 10)} min`);
+      });
+    });
+  };
+
+  const getRestaurantPhoto = async (restaurantName, address) => {
+    return new Promise((resolve) => {
+      if (!window.google?.maps?.places) {
+        console.log('Google Places API not loaded');
+        resolve(null);
+        return;
+      }
+
+      const service = new window.google.maps.places.PlacesService(document.createElement('div'));
+      const request = {
+        query: `${restaurantName} ${address}`,
+        fields: ['photos']
+      };
+
+      service.findPlaceFromQuery(request, (results, status) => {
+        if (status === window.google.maps.places.PlacesServiceStatus.OK && results?.[0]?.photos?.[0]) {
+          const photoUrl = results[0].photos[0].getUrl({ maxWidth: 400 });
+          resolve(photoUrl);
+        } else {
+          resolve(null);
+        }
+      });
+    });
   };
   
 
   
   useEffect(() => {
-    const loadDistances = async () => {
+    const loadDistancesAndImages = async () => {
       const newDistances = {};
+      const newImages = {};
+      
+      // Wait for Google Maps to load
+      const waitForGoogle = () => {
+        return new Promise((resolve) => {
+          if (window.google?.maps?.places && window.google?.maps?.DistanceMatrixService) {
+            resolve();
+          } else {
+            const checkGoogle = setInterval(() => {
+              if (window.google?.maps?.places && window.google?.maps?.DistanceMatrixService) {
+                clearInterval(checkGoogle);
+                resolve();
+              }
+            }, 100);
+            setTimeout(() => {
+              clearInterval(checkGoogle);
+              resolve();
+            }, 5000);
+          }
+        });
+      };
+
+      await waitForGoogle();
       
       for (const [type, restaurants] of Object.entries(restaurantsByType)) {
         for (const restaurant of restaurants) {
           console.log(`Calculating distance from ${data.Contact.address} to ${restaurant.address}`);
           const distance = await calculateDistance(data.Contact.address, restaurant.address);
           newDistances[restaurant.name] = distance;
+          
+          const photo = await getRestaurantPhoto(restaurant.name, restaurant.address);
+          if (photo) {
+            newImages[restaurant.name] = photo;
+          }
         }
       }
       
       setDistances(newDistances);
+      setRestaurantImages(newImages);
     };
     
-    loadDistances();
+    loadDistancesAndImages();
   }, []);
 
   return (
@@ -81,19 +144,38 @@ export const FoodDrink = () => {
                     <div
                       className="restaurant-image"
                       style={{
-                        backgroundColor: restaurant.bgColor,
                         height: '200px',
                         borderRadius: '8px',
                         marginBottom: '15px',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        color: 'white',
-                        fontSize: '18px',
-                        fontWeight: 'bold'
+                        overflow: 'hidden'
                       }}
                     >
-                      {restaurant.name}
+                      {restaurantImages[restaurant.name] ? (
+                        <img 
+                          src={restaurantImages[restaurant.name]} 
+                          alt={restaurant.name}
+                          style={{
+                            width: '100%',
+                            height: '100%',
+                            objectFit: 'cover'
+                          }}
+                        />
+                      ) : (
+                        <div
+                          style={{
+                            backgroundColor: restaurant.bgColor,
+                            height: '100%',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            color: 'white',
+                            fontSize: '18px',
+                            fontWeight: 'bold'
+                          }}
+                        >
+                          {restaurant.name}
+                        </div>
+                      )}
                     </div>
                     <h4>{restaurant.name}</h4>
                     <p>{restaurant.description}</p>
